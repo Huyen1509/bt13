@@ -1,73 +1,102 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cit bui 2</title>
+    <title>Document</title>
 </head>
-<body style="background-color:powderblue;">
-    <a href="https://chatgpt.com/c/6713685b-735c-8000-adb4-d9ca2ac235d6"target="_blank">huiel.09</a>
-    <a href="https://www.w3schools.com/html/default.asp"target="_blank">hihi</a>
-    <img src="h.jpg"alt="annhonghaseo"
-    width="200"
-    height="300">
-    <p>ai co bit tui noi chi khom</p>
-    <b>oke</b>
-    <p style="color:red;">This is a red paragraph.</p>
-    <p title="I'm a tooltip">This is a paragraph.</p>
-    <p style="font-size:300%;">this is a desk</p>
-    <p title="i'm huyen">ta chi song mot lan tren doi</p>
-    <i>Chi lan co an com khong</i><br>
-    <u>chi lan co di ngu khong</u>
-    <hr><p>khong yeu em thi yeu ai</p>
-    <h1>Nguoi phi ly ta nen lam gi</h1>
-    <h2>Cay cam ngot cua toi</h2>
-    <h3>chuyen ve mot cau be tren hanh trinh kham pha</h3>
-    <p style="font-size: 20px;">kham pha nhieu dieu</p>
-    <h1 style="background-color:pink;">?</h1>
-    <p style="background-color:tomato;">This is a paragraph</p>
-    <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
-    <h1 style="text-align:center;">Centered Heading</h1>
-    <p style="text-align:center;font-size:300%;">Centered paragraph.</p>
-    <p style="font-family:courier;text-align:center;">This is a paragraph.</p>
-    <strong>Một ngày mới tốt lành</strong>
-    <em>This text is emphasized</em><br>
-    <small>This is some smaller text.</small>
-    <p>Do not forget to buy <mark>milk</mark> today.</p>
-    <p>My favorite color is <del>blue</del> red.</p>
-    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
-    <p>This is <sub>subscripted</sub> text.</p>
-    <p>This is <sup>superscripted</sup> text.</p>
-    <blockquote cite="http://www.worldwildlife.org/who/index.html">
-        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
-    </blockquote>
-    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-    <address>
-        Written by John Doe.<br>
-        Visit us at:<br>
-        Example.com<br>
-        Box 564, Disneyland<br>
-        USA
-    </address>
-    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
-    <bdo dir="rtl">This text will be written from right to left</bdo>
-    <p>This is a paragraph.</p>
-    <!-- <p>This is another paragraph </p> -->
-    <p>This is a paragraph too.</p>
-    <!-- This is a comment -->
-    <p>This is a paragraph.</p>
-    <!-- Remember to add more information here -->
-     <p style="color:black;">cit</p>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+      </form>
 
-
-
-    
-    
-
-  
-
-
-
-
+      <p>Choose your favorite Web language:</p>
+      <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+      </form>
+      <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+      </form>
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" value="John"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <form action="/action_page.php" target="_blank"></form>
+      <form action="/action_page.php" autocomplete="on"></form>
+      <form>
+        <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+      </form>
+      <form action="/action_page.php" id="form1">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" form="form1">
+      <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+      </form>
+      <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+      </svg>
+      <svg width="400" height="120">
+        <rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue" />
+      </svg>
+      <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+      </svg>
+      <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+      </svg>
+      <svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1">
+            <stop offset="0%" stop-color="yellow" />
+            <stop offset="100%" stop-color="red" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+        Sorry, your browser does not support inline SVG.
+      </svg>
+      <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 </body>
 </html>
