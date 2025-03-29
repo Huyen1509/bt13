@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý công việc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #taskList li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+        #taskList li button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        #taskList li:hover {
+            background-color: #f0f0f0;
+        }
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản lý công việc</h1>
+    <input type="text" id="taskInput" placeholder="Nhập công việc mới">
+    <button id="addButton">Thêm Công Việc</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        document.getElementById("addButton").addEventListener("click", function() {
+            let taskInput = document.getElementById("taskInput");
+            let taskText = taskInput.value.trim();
+            
+            if (taskText === "") {
+                alert("Vui lòng nhập công việc!");
+                return;
+            }
+            
+            let li = document.createElement("li");
+            li.textContent = taskText;
+            
+            // Thêm nút "Xóa"
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Xóa";
+            deleteButton.addEventListener("click", function() {
+                li.remove();
+            });
+            li.appendChild(deleteButton);
+            
+            // Thêm sự kiện để sửa công việc khi bấm vào
+            li.addEventListener("click", function() {
+                let newTaskText = prompt("Sửa công việc:", li.textContent.replace("Xóa", "").trim());
+                if (newTaskText) {
+                    li.firstChild.textContent = newTaskText;
+                }
+            });
+            
+            document.getElementById("taskList").appendChild(li);
+            taskInput.value = "";  // Xóa nội dung ô nhập sau khi thêm công việc
+        });
+
+        // Nhấn Enter để thêm công việc
+        document.getElementById("taskInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                document.getElementById("addButton").click();
+            }
+        });
+
+        // Sự kiện thay đổi màu nền khi rê chuột vào công việc
+        document.getElementById("taskList").addEventListener("mouseover", function(event) {
+            if (event.target.tagName === "LI") {
+                event.target.style.backgroundColor = "#f0f0f0";
+            }
+        });
+
+        document.getElementById("taskList").addEventListener("mouseout", function(event) {
+            if (event.target.tagName === "LI") {
+                event.target.style.backgroundColor = "";
+            }
+        });
+
+        // Khi bấm vào công việc, thay đổi trạng thái hoàn thành
+        document.getElementById("taskList").addEventListener("click", function(event) {
+            if (event.target.tagName === "LI") {
+                event.target.style.textDecoration = (event.target.style.textDecoration === "line-through") ? "none" : "line-through";
+            }
+        });
+    </script>
+</body>
+</html>
